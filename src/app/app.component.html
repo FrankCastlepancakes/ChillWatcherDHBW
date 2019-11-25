@@ -1,0 +1,134 @@
+<!-- <h1 class="title">Angular Router</h1>
+<nav>
+    <a routerLink="/video-liste" routerLinkActive="active">Video-Liste</a>
+    <a routerLink="/series-list" routerLinkActive="active">Series-List</a>
+</nav>
+
+
+
+<router-outlet></router-outlet> -->
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card bg-dark my-5">
+                <div class="card-body">
+                    <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+                    <ul class="text-center list-inline py-3">
+                        <li class="list-inline-item">
+                            <a routerLink="/movies" class="btn btn-info">List Movies</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a routerLink="/addvideo" class="btn btn-info">Add Movie</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> -->
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class=" container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo/Chillwatcher-Logo-4.svg " width="30" height="30" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="active">
+                        <a class="nav-link" routerLink="/movies">
+                            <span class="fa fa-dashcube"></span>Startseite <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/movies">
+                            <span class="fa fa-heart"></span>Serien
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/movies">
+                            <span class="fa fa-film"></span>Filme
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/movies">
+                            <span class="fa fa-hourglass"></span>Kürzlich hinzugefügt
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/movies">
+                            <span class="fa fa-list"></span>Meine Liste</a>
+                    </li>
+                </ul>
+                <form onsubmit="return false" class="form-inline my-2 my-lg-0">
+                    <div class="input-group" ng-app="app" ng-controller="KeyController">
+                        <input class="form-control py-2 border-right-0 border" style="color: white;" type="search" placeholder="Titel, Genre, Schauspieler" id="example-search-input" ng-keypress="$event.keyCode===1 3 && KeyPress()">
+                        <span class="input-group-append">
+                                  <div class="input-group-text bg-transparent"><mat-icon>search</mat-icon></div>
+                                </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <router-outlet></router-outlet>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small indigo">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!">Startseite</a></li>
+                        <li><a href="#!">Serien</a></li>
+                        <li><a routerLink="/movies">Filme</a></li>
+                        <li><a href="#!">Kürzlich hinzugefügt</a></li>
+                        <li><a href="#!">Meine Liste</a></li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Rechtlich</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!">Impressum</a></li>
+                        <li><a href="#!">Datenschutz</a></li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a routerLink="/home"> ChillWatcher.de</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+</body>
