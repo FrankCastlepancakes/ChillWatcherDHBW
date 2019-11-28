@@ -1,27 +1,38 @@
-# AngularApp
+# WebApp of team ChillWatcher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+This file shall be an instruction how to start the app at localhorst. An official version of the app is hosted with a webserver on the domain pfobs.de/ChillWatcher. The WebApp is based on the frameworks Angular (frontend) and Spring-Boot (backend).
 
-## Development server
+## Step One
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Download and install Node.js and npm with the guideline on https://www.npmjs.com/get-npm and confirm the installation of both.
 
-## Code scaffolding
+## Step Two
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Download and install the Angular CLI with the command: npm install -g @angular/cli
 
-## Build
+## Step Three
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Create a new Angular project on your local pc with the command: ng new ChillWatcher
+Answer every question with "yes" and choose SASS as compiler.
 
-## Running unit tests
+## Step Four
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Download the code from the repository https://github.com/Pfob/ChillWatcher to another local folder on your PC.
 
-## Running end-to-end tests
+## Step Five
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Copy the downloaded files and the "src" folder to the folder of your recently created Angular project. Overwrite the existing files.
 
-## Further help
+## Step Six
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+On the CLI switch to the folder of your Angular project. Start the Spring-Boot app there with the command: mvn spring-boot:run
+The Spring-Boot app will now run on http://localhost:8080/
+
+## Step Seven
+
+Create another CLI window and switch to the folder, too. Start the Angular app with the command: ng serve
+The Angular app will now run on http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Congratulations
+
+The WebApp will now run on the localhost of your PC. You can interact with the app on http://localhost:4200/, the output of the interface of the backend can be seen on http://localhost:8080/.
