@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../model/movie';
+import { MovieServiceService } from '../service/movie-service.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  movies: Movie[];
+ 
+  constructor(private movieService: MovieServiceService) {
+  }
 
   ngOnInit() {
+    //console.log(this.movieService.findAll().source.source);
+    this.movieService.findAll().subscribe(data => {
+      //console.log('Hello', data);
+      this.movies = data;
+    });
   }
 
 }

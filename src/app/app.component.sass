@@ -1,5 +1,5 @@
 body
-  background: url(/assets/img/wallpaper/San-Francisco.jpg) no-repeat center center fixed
+  background: url(/assets/img/San-Francisco.jpg) no-repeat center center fixed
   -webkit-background-size: cover
   -moz-background-size: cover
   background-size: cover
@@ -7,6 +7,9 @@ body
 
 .navbar
   background-color: rgba(29, 31, 36, 0.5) !important
+
+  a
+    color: white
 
   .navbar-brand
     color: #FFF
@@ -16,31 +19,33 @@ body
       color: rgb(255, 255, 255)
 
   .navbar-nav
-    li a
-      color: #FFF !important
 
     .active
       border-bottom: 3px solid #00e5ff
+      color: #00e5ff
+      cursor: default
 
-      a:hover
-        cursor: default
+    .active a
+      color: red
 
     .nav-item
       &:hover
-        border-top: 3px solid #00e5ff
-        transition: border 1s
-        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-
-      a:hover
-        color: #00e5ff !important
-        transition: color 2s
-        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+        //border-top: 3px solid #00e5ff
+        //transition: border 1s
+        //transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
 
       span
         padding-right: 5px
 
     .active span
       padding-right: 5px
+
+    li a
+
+      &:hover
+        color: #00e5ff !important
+        transition: color 2s
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
 
   .nav-item .dropdown-menu .dropdown-item
     color: #000 !important
@@ -87,6 +92,7 @@ body
 .page-footer
   background-color: rgba(10, 10, 10, 0.7)
   color: white
+  margin-top: 450px
 
 .page-footer a:link
     color: #00e5ff

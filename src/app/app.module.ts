@@ -44,21 +44,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SeriesListComponent } from './series-list/series-list.component';
-import { VideoListComponent } from './video-list/video-list.component';
-import { MovieFormComponent } from './movie-form/movie-form.component';
 
 import { MovieServiceService } from './service/movie-service.service';
 import { HomeComponent } from './home/home.component';
+import { MoviesComponent } from './movies/movies.component';
+import { SeriesComponent } from './series/series.component';
+import { RecentlyAddedComponent } from './recently-added/recently-added.component';
+import { MyListComponent } from './my-list/my-list.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    SeriesListComponent,
-    VideoListComponent,
-    MovieFormComponent,
     HomeComponent,
+    MoviesComponent,
+    SeriesComponent,
+    RecentlyAddedComponent,
+    MyListComponent,
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

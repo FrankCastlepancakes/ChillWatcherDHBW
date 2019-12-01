@@ -5,17 +5,42 @@
 <body>
     <!-- Page Content -->
     <div class="container">
-        <div class="card border-0 shadow my-5">
-            <div class="card-body p-5">
-                <h1 class="font-weight-light">Fixed Full Page Background Image</h1>
-                <p class="lead">In this snippet, the background image is fixed to the body element. Content on the page will scroll, but the image will remain in a fixed position!</p>
-                <p class="lead">Scroll down...</p>
-                <div style="height: 700px"></div>
-                <p class="lead mb-0">You've reached the end!</p>
+        <div class="card-columns">
+            <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
+                <img class="card-img-top" [src]="movie.linkToWallpaper" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.name }}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
         </div>
+
+        <!-- 
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movie of movies">
+                    <td class="table-light">{{ movie.id }}</td>
+                    <td class="table-light">{{ movie.name }}</td>
+                    <td class="table-light">{{ movie.rating }}</td>
+                    <td class="table-light">{{ movie.linkToWallpaper }}</td>
+                    <img [src]="movie.linkToWallpaper">
+                </tr>
+            </tbody>
+        </table>-->
+
     </div>
 
 </body>
+
 
 <router-outlet></router-outlet>

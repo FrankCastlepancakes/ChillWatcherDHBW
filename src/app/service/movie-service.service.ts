@@ -20,6 +20,11 @@ export class MovieServiceService {
     //console.log(this.http.get<Movie[]>(this.moviesUrl));
     return this.http.get<Movie[]>(this.moviesUrl);
   }
+
+  /*public findMatching(searchInput: String): Observable<Movie[]> {
+    return null;
+    //return this.http.get<Movie[]>(this.moviesUrl + "?name=" + searchInput);
+  }*/
  
   public save(movie: Movie) {
     return this.http.post<Movie>(this.moviesUrl, movie);

@@ -13,15 +13,18 @@ public class Movie {
     private long id;
     private final String name;
     private final int rating;
+    private final String linkToWallpaper;
     
     public Movie() {
         this.name = "";
         this.rating = 0;
+        this.linkToWallpaper = "";
     }
     
-    public Movie(String name, int rating) {
+    public Movie(String name, int rating, String linkToWallpaper) {
         this.name = name;
         this.rating = rating;
+        this.linkToWallpaper = linkToWallpaper;
     }
 
     public long getId() {
@@ -34,6 +37,10 @@ public class Movie {
 
     public int getRating() {
         return rating;
+    }
+
+    public String getLinkToWallpaper(){
+        return linkToWallpaper;
     }
     
     @Override
