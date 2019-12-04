@@ -21,7 +21,7 @@ Download the code from the repository https://github.com/Pfob/ChillWatcher to an
 
 ## Step Five
 
-Copy the downloaded files and the "src" folder to the folder of your recently created Angular project. Overwrite the existing files.
+Copy the downloaded files and the "src" folder to the folder of your recently created Angular project. Delete all files and folders there,overwrite the existing files.
 
 ## Step Six
 
