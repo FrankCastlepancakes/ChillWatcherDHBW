@@ -8,29 +8,33 @@ Download and install Node.js and npm with the guideline on https://www.npmjs.com
 
 ## Step Two
 
-Download and install the Angular CLI with the command: npm install -g @angular/cli
+Download and install the Angular CLI with the command "npm install -g @angular/cli".
 
 ## Step Three
 
-Create a new Angular project on your local pc with the command: ng new ChillWatcher
-Answer every question with "yes" and choose SASS as compiler.
+Download and install the Spring Boot CLI with the guideline on https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html.
 
 ## Step Four
 
-Download the code from the repository https://github.com/Pfob/ChillWatcher to another local folder on your PC.
+Create a new Angular project on your local pc with the command "ng new ChillWatcher". 
+Answer every question with "yes" and choose SASS as compiler.
 
 ## Step Five
 
-Copy the downloaded files and the "src" folder to the folder of your recently created Angular project. Delete all files and folders there, overwrite the existing files.
+Download the code from the repository https://github.com/Pfob/ChillWatcher to another local folder on your PC.
 
 ## Step Six
 
-On the CLI switch to the folder of your Angular project. Start the Spring-Boot app there with the command: mvn spring-boot:run
-The Spring-Boot app will now run on http://localhost:8080/
+Copy the downloaded files and the "src" folder to the folder of your recently created Angular project. Delete all files and folders there, except the "e2e" and "node_modules" folder overwrite the existing files.
 
 ## Step Seven
 
-Create another CLI window and switch to the folder, too. Start the Angular app with the command: ng serve
+On the CLI switch to the folder of your Angular project. Start the Spring-Boot app there with the command "mvn spring-boot:run". 
+The Spring-Boot app will now run on http://localhost:8080/
+
+## Step Eight
+
+Create another CLI window and switch to the folder, too. Start the Angular app with the command "ng serve". 
 The Angular app will now run on http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## Congratulations
