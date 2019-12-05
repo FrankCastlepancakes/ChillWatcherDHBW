@@ -12,7 +12,7 @@ Download and install the Angular CLI with the command "npm install -g @angular/c
 
 ## Step Three
 
-Download and install the Spring Boot CLI with the guideline on https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html.
+Download and install the Spring Boot CLI with the guideline on https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html. Important: In the pox.xml Java 8 is used as JDK, if you want to use another JDK you have to change the dependence.
 
 ## Step Four
 
