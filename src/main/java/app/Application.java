@@ -19,7 +19,7 @@ public class Application {
     CommandLineRunner init(MovieRepository movieRepository) {
         return args -> {
             Stream.of("Joker", "Batman: The Dark Knight Rises", "8 mile", "Lincoln", "Robin Hood", "Mockingbird", "Peck is back", "Deadpool").forEach(name -> {
-                Movie movie = new Movie(name, 5);
+                Movie movie = new Movie(name, 5, "/assets/img/Filme/" + name + ".jpg");
                 movieRepository.save(movie);
             });
             movieRepository.findAll().forEach(System.out::println);
