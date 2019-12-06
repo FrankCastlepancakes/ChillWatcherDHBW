@@ -48,37 +48,14 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <!-- <packaging>war</packaging> -->
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-
-            <!-- <plugin> 
-                <artifactId>maven-resources-plugin</artifactId>     
-                <executions>  
-                    <execution>   
-                        <id>copy-resources</id>    
-                        <phase>validate</phase> 
-                        <goals><goal>copy-resources</goal></goals>             
-                        <configuration>                                 
-                            <outputDirectory>${project.build.directory}/resources/static/</outputDirectory >      
-                            <resources>    
-                                <resource>       
-                                    <directory>../AngularAppSpringApp/dist</directory> 
-                                </resource>   
-                            </resources>   
-                        </configuration>        
-                    </execution>   
-                </executions>
-            </plugin> -->
-
-
         </plugins>
+        <finalName>spring-boot-docker</finalName>
     </build>
 
 </project>

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Movie {
@@ -11,19 +12,25 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private final String name;
-    private final int rating;
+    private final String movieName;
+    private final int movieRating;
+    private Date movieReleaseDate;
+    private String movieDesription;
     private final String linkToWallpaper;
-    
+
     public Movie() {
-        this.name = "";
-        this.rating = 0;
+        this.movieName = "";
+        this.movieRating = 0;
+        this.movieReleaseDate = new Date();
+        this.movieDesription = "";
         this.linkToWallpaper = "";
     }
     
-    public Movie(String name, int rating, String linkToWallpaper) {
-        this.name = name;
-        this.rating = rating;
+    public Movie(String movieName, int movieRating, Date movieReleaseDate, String movieDesription, String linkToWallpaper) {
+        this.movieName = movieName;
+        this.movieRating = movieRating;
+        this.movieReleaseDate = movieReleaseDate;
+        this.movieDesription = movieDesription;
         this.linkToWallpaper = linkToWallpaper;
     }
 
@@ -31,12 +38,20 @@ public class Movie {
         return id;
     }
     
-    public String getName() {
-        return name;
+    public String getMovieName() {
+        return movieName;
     }
 
-    public int getRating() {
-        return rating;
+    public int getMovieRating() {
+        return movieRating;
+    }
+
+    public Date getMovieReleaseDate() {
+        return movieReleaseDate;
+    }
+
+    public String getMovieDesription() {
+        return movieDesription;
     }
 
     public String getLinkToWallpaper(){
@@ -45,6 +60,6 @@ public class Movie {
     
     @Override
     public String toString() {
-        return "Movie{" + "id=" + id + ", name=" + name + ", rating=" + rating + '}';
+        return "Movie{" + "id=" + id + ", name=" + movieName + ", rating=" + movieRating + '}';
     }
 }

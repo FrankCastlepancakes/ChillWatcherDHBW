@@ -53,6 +53,7 @@ import { RecentlyAddedComponent } from './recently-added/recently-added.componen
 import { MyListComponent } from './my-list/my-list.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { MovieFormComponent } from './movie-form/movie-form.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MyListComponent,
     LoginComponent,
     SignUpComponent,
+    MovieFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -26,8 +26,9 @@ public class MovieController {
         return (List<Movie>) movieRepository.findAll();
     }
 
-    /*@PostMapping("/movies")
+    @PostMapping("/addMovie")
     void addMovie(@RequestBody Movie movie) {
+        System.out.println("Backend     " + movie);
         movieRepository.save(movie);
-    }*/
+    }
 }

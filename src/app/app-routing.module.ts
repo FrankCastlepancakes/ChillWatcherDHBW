@@ -9,6 +9,7 @@ import { MyListComponent } from './my-list/my-list.component';
 import { RecentlyAddedComponent } from './recently-added/recently-added.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { MovieFormComponent } from './movie-form/movie-form.component'
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'my-list', component: MyListComponent },
   { path: 'recently-added', component: RecentlyAddedComponent },
   { path: 'sign-up', component: SignUpComponent },
+  { path: 'movie-Form', component: MovieFormComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

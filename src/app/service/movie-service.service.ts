@@ -16,8 +16,6 @@ export class MovieServiceService {
   }
  
   public findAll(): Observable<Movie[]> {
-    //console.log(this.http.get(this.moviesUrl));
-    //console.log(this.http.get<Movie[]>(this.moviesUrl));
     return this.http.get<Movie[]>(this.moviesUrl);
   }
 
@@ -26,7 +24,7 @@ export class MovieServiceService {
     //return this.http.get<Movie[]>(this.moviesUrl + "?name=" + searchInput);
   }*/
  
-  public save(movie: Movie) {
-    return this.http.post<Movie>(this.moviesUrl, movie);
+  public addMovie(movie: Movie) {
+    this.http.post("http://localhost:8080/addMovie", movie).toPromise();
   }
 }

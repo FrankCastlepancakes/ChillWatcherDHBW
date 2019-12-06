@@ -1,0 +1,52 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>Film hinzufügen</h1>
+        <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Filmname, z.B. Peck is back, eine Geschichte boolescher Algebra" id="movieName" required [(ngModel)]="model.movieName" name="movieName" #movieName="ngModel">
+                    <div [hidden]="movieName.valid || movieName.pristine" class="alert alert-danger">
+                        Filmname wird benötigt
+                    </div>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Bewertung (Zahlen zwischen 0,0 und 100,0)" id="movieRating" required [(ngModel)]="model.movieRating" name="movieRating" #movieRating="ngModel">
+                    <div [hidden]="movieRating.valid || movieRating.pristine" class="alert alert-danger">
+                        Film-Bewertung wird benötigt
+                    </div>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Erscheinungsdatum" required [(ngModel)]="model.movieReleaseDate" name="movieReleaseDate" #movieReleaseDate="ngModel">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                <div [hidden]="movieReleaseDate.valid || movieReleaseDate.pristine" class="alert alert-danger">
+                    Veröffentlichungs-Datum wird benötigt
+                </div>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Film-Beschreibung" required [(ngModel)]="model.movieDesription" name="movieDesription" #movieDesription="ngModel"></textarea>
+                <div [hidden]="movieDesription.valid || movieDesription.pristine" class="alert alert-danger">
+                    Film-Beschreibung wird benötigt
+                </div>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Transaktions-Code bestätigen" [type]="hide ? 'password' : 'text'" required [(ngModel)]="model.transactionCode" name="transactionCode" #transactionCode="ngModel">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <div [hidden]="transactionCode.valid || transactionCode.pristine" class="alert alert-danger">
+                    Transaktions-Code wird benötigt
+                </div>
+            </mat-form-field>
+
+            <button type="submit" class="btn btn-success" (click)="newMovie(); movieForm.reset()" [disabled]="!movieForm.form.valid">Senden</button>
+        </form>
+    </div>
+</div>
