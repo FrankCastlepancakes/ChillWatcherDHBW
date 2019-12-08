@@ -1,15 +1,23 @@
+*
+	box-sizing: border-box
+
 .card-group 
 	width: 88% 
 	height: auto 
-	margin: 0 auto 
+	margin: 0 auto
 	display: flex 
 	flex-flow: row wrap 
+
+.column
+	width: 30%
+
 .card 
 	overflow: hidden 
 	background: transparent 
 	border: none 
 	width: 350px 
 	height: 450px 
+	padding: 16px
 	margin: 1em 
 	perspective: 1500px 
 	.content 
@@ -22,6 +30,10 @@
 	&:checked 
 		& ~ .content 
 			transform: rotateY(180deg) 
+.genre
+	text-align: center
+	grid-row: 2
+
 .front,
 .back 
 	position: absolute 
@@ -54,6 +66,13 @@
 .videoplay 
 	display: grid 
 	grid-row: 2 
+
+.more-videos
+	display: grid
+	grid-row: 2
+	text-align: center
+	
+
 .back 
 	transform: rotateY(180deg) 
 	.inner 
@@ -89,11 +108,4 @@
 	min-width: 3em 
 	color: #00e5ff 
 	text-align: center 
-::-webkit-scrollbar 
-	width: 15px 
-::-webkit-scrollbar-track 
-	background: rgba(40, 40, 40, 1.0) 
-::-webkit-scrollbar-thumb 
-	background: #018492 
-	&:hover 
-		background: #00e5ff 
+
