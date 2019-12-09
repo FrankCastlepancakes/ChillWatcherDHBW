@@ -54,6 +54,12 @@ import { MyListComponent } from './my-list/my-list.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MovieFormComponent } from './movie-form/movie-form.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ThrillerComponent } from './thriller/thriller.component';
+import { KomoedienComponent } from './komoedien/komoedien.component';
+import { DramaComponent } from './drama/drama.component';
+import { HorrorComponent } from './horror/horror.component';
+import { KidsComponent } from './kids/kids.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +73,12 @@ import { MovieFormComponent } from './movie-form/movie-form.component';
     LoginComponent,
     SignUpComponent,
     MovieFormComponent,
+    PrivacyComponent,
+    ThrillerComponent,
+    KomoedienComponent,
+    DramaComponent,
+    HorrorComponent,
+    KidsComponent,
   ],
   imports: [
     BrowserModule,
