@@ -1,3 +1,18 @@
+--> Damit könnte man noch die Scrollbar an der Seite verändern und farblich in unserem blau gestalten
+::-webkit-scrollbar 
+	width: 15px 
+::-webkit-scrollbar-track 
+	background: rgba(40, 40, 40, 1.0) 
+::-webkit-scrollbar-thumb 
+	background: #018492 
+	&:hover 
+		background: #00e5ff 
+
+
+
+
+
+
 # WebApp of team ChillWatcher
 
 This file shall be an instruction how to start the app at localhorst. An official version of the app is hosted with a webserver on the domain pfobs.de/ChillWatcher. The WebApp is based on the frameworks Angular (frontend) and Spring-Boot (backend).

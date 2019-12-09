@@ -9,7 +9,13 @@ import { MyListComponent } from './my-list/my-list.component';
 import { RecentlyAddedComponent } from './recently-added/recently-added.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
-import { MovieFormComponent } from './movie-form/movie-form.component'
+import { MovieFormComponent } from './movie-form/movie-form.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ThrillerComponent } from './thriller/thriller.component';
+import { KomoedienComponent } from './komoedien/komoedien.component';
+import { DramaComponent } from './drama/drama.component';
+import { HorrorComponent } from './horror/horror.component';
+import { KidsComponent } from './kids/kids.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +26,12 @@ const appRoutes: Routes = [
   { path: 'recently-added', component: RecentlyAddedComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'movie-Form', component: MovieFormComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'thriller', component: ThrillerComponent },
+  { path: 'komoedien', component: KomoedienComponent },
+  { path: 'drama', component: DramaComponent },
+  { path: 'horror', component: HorrorComponent },
+  { path: 'kids', component: KidsComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
