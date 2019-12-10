@@ -1,15 +1,12 @@
 *
 	box-sizing: border-box
 
-.card-group 
-	width: 88% 
+.card-column
+	width: 100% 
 	height: auto 
 	margin: 0 auto
 	display: flex 
 	flex-flow: row wrap 
-
-.column
-	width: 30%
 
 .card 
 	overflow: hidden 
@@ -90,11 +87,11 @@
 		grid-row: 2 
 		font-size: 20px 
 	.details 
-		grid-row: 4 
+		grid-row: 2 
 		color: #00e5ff 
 		size: 15px 
 	.description 
-		grid-row: 6 
+		grid-row: 5 
 		grid-column: 1/-1 
 		font-size: 15px 
 		color: #00e5ff 
@@ -107,5 +104,30 @@
 	line-height: 2.9em 
 	min-width: 3em 
 	color: #00e5ff 
-	text-align: center 
+	text-align: center
+	cursor: pointer
+	 
 
+@media (min-width: 34em)
+	.card-columns
+		-webkit-column-count: 2
+		-moz-column-count: 2
+		column-count: 2
+
+@media (min-width: 48em)
+	.card-columns
+		-webkit-column-count: 3
+		-moz-column-count: 3
+		column-count: 3
+
+@media (min-width: 62em)
+	.card-columns
+		-webkit-column-count: 4
+		-moz-column-count: 4
+		column-count: 4
+
+@media (min-width: 75em)
+	.card-columns
+		-webkit-column-count: 5
+		-moz-column-count: 5
+		column-count: 5
