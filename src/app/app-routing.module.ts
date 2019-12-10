@@ -16,6 +16,8 @@ import { KomoedienComponent } from './komoedien/komoedien.component';
 import { DramaComponent } from './drama/drama.component';
 import { HorrorComponent } from './horror/horror.component';
 import { KidsComponent } from './kids/kids.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,7 +35,9 @@ const appRoutes: Routes = [
   { path: 'horror', component: HorrorComponent },
   { path: 'kids', component: KidsComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
+  { path: 'impressum', component:ImpressumComponent }
+  
 ];
 
 @NgModule({
