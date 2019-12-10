@@ -46,6 +46,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CountdownModule } from "ng2-date-countdown";
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { MovieServiceService } from './service/movie-service.service';
@@ -63,6 +65,7 @@ import { KomoedienComponent } from './komoedien/komoedien.component';
 import { DramaComponent } from './drama/drama.component';
 import { HorrorComponent } from './horror/horror.component';
 import { KidsComponent } from './kids/kids.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +85,7 @@ import { KidsComponent } from './kids/kids.component';
     DramaComponent,
     HorrorComponent,
     KidsComponent,
+    ImpressumComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,6 +94,7 @@ import { KidsComponent } from './kids/kids.component';
     HttpClientModule,
     FormsModule,
     CarouselModule.forRoot(),
+    CountdownModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
