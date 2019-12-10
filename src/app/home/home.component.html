@@ -1,46 +1,89 @@
-<head>
+<br> <br>
+
+        <div class="container h-100">
+                <div class="d-flex align-items-center  h-100" >
+                    <div class="mx-auto bg-danger">
+<carousel>
+        <slide>
+          <img class="img-main-carusel" src="assets\img\carousel\logo-carousel.PNG" alt="first slide" style="display: block; height: 500px; width: 1000px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>ChillWatcher</h3>
+            <p>Better than Netflix</p>
+          </div>
+        </slide>
+        <slide>
+          <img class="img-main-carusel" src="assets\img\carousel\filme-carousel.webp" alt="second slide" style="display: block; height: 500px; width: 1000px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Filme</h3>
+            <p>Entdecke jetzt all unsere Filme</p>
+          </div>
+        </slide>
+        <slide>
+          <img class="img-main-carusel" src="assets\img\carousel\serien-carousel.webp" alt="third slide" style="display: block;height: 500px; width: 1000px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Serien</h3>
+            <p>Schauen Serien wann immer du willst</p>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--
+    <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Page Content -->
-    <div class="container">
-        <div class="card-columns">
-            <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
-                <img class="card-img-top" [src]="movie.linkToWallpaper" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ movie.name }}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+         Page Content
+        <div class="container">
+                <div class="card-columns">
+                    <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
+                        <img class="card-img-top" [src]="movie.linkToWallpaper" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ movie.name }}</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
+        
+                 
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Link</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let movie of movies">
+                            <td class="table-light">{{ movie.id }}</td>
+                            <td class="table-light">{{ movie.name }}</td>
+                            <td class="table-light">{{ movie.rating }}</td>
+                            <td class="table-light">{{ movie.linkToWallpaper }}</td>
+                            <img [src]="movie.linkToWallpaper">
+                        </tr>
+                    </tbody>
+                </table>
+        
             </div>
-        </div>
-
-        <!-- 
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Rating</th>
-                    <th scope="col">Link</th>
-                    <th scope="col">Image</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let movie of movies">
-                    <td class="table-light">{{ movie.id }}</td>
-                    <td class="table-light">{{ movie.name }}</td>
-                    <td class="table-light">{{ movie.rating }}</td>
-                    <td class="table-light">{{ movie.linkToWallpaper }}</td>
-                    <img [src]="movie.linkToWallpaper">
-                </tr>
-            </tbody>
-        </table>-->
-
-    </div>
 
 </body>
 
 
 <router-outlet></router-outlet>
+-->
