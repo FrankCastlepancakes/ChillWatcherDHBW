@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import {CarouselModule} from "angular2-carousel";
 //import {Rx} from 'rxjs/Rx';
 
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { CarouselModule } from 'ngx-bootstrap';
+
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
