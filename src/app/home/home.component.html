@@ -1,10 +1,10 @@
 <br> <br>
 
 <div class="container h-100">
-  <div class="d-flex align-items-center  h-100" >
-    <div class="mx-auto bg-danger">
-      <carousel>
-        <slide>
+    <div class="d-flex align-items-center  h-100">
+        <div class="mx-auto bg-danger">
+            <!-- <carousel>
+                <slide>
           <img class="img-main-carusel" src="assets\img\carousel\logo-carousel.PNG" alt="first slide" style="display: block; height: 500px; width: 1000px;">
           <div class="carousel-caption d-none d-md-block">
               <h3><a class="btn btn-default" href="/home"><font color="#00e5ff" size="6"><strong>ChillWatcher</strong></font></a></h3>
@@ -25,111 +25,74 @@
             <p><font color="#00e5ff">Schaue Serien wann immer du willst</font></p>
           </div>
         </slide>
-      </carousel>
+            </carousel> -->
+        </div>
     </div>
-  </div>
 </div>
-  
+
 <br><br><br><br>
-<hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" /> 
+<hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" />
 
 <br><br>
 
-<h3 style='text-align:center'><a><font color="#00e5ff" size="6"><strong>Weihnachtsspecial</strong></font></a></h3>
-<p style='text-align:center'><font color="#00e5ff" size="4">In kurzer Zeit erwartet dich hier eine große Überraschung!</font></p>
-<hr style="height: 1px; width: 50%; background-color: #00e5ff; border: 0;" /> 
-<a style='text-align:center'><font color="#00e5ff" size="6"><countdown units="Days | Hours | Minutes | Seconds"  end="December 24, 2019"></countdown></font></a>
+<h3 style='text-align:center'>
+    <a>
+        <font color="#00e5ff" size="6"><strong>Weihnachtsspecial</strong></font>
+    </a>
+</h3>
+<p style='text-align:center'>
+    <font color="#00e5ff" size="4">In kurzer Zeit erwartet dich hier eine große Überraschung!</font>
+</p>
+<hr style="height: 1px; width: 50%; background-color: #00e5ff; border: 0;" />
+<a style='text-align:center'>
+    <font color="#00e5ff" size="6">
+        <countdown units="Days | Hours | Minutes | Seconds" end="December 24, 2019"></countdown>
+    </font>
+</a>
 
 <br>
 
-<hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" /> 
+<hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" />
 
 <br>
 
-<p style='text-align:center'><font color="#00e5ff" size="6"><strong>Serie der Woche</strong></font></p>
+<p style='text-align:center'>
+    <font color="#00e5ff" size="6"><strong>Serie der Woche</strong></font>
+</p>
 
-  <div class="column">
+<div class="column">
     <div class="row">
-      <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="assets/img/Serien/weihnachtsmann_ und_co._kg_s.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Der Weihnachtsmann beschenkt mithilfe seiner fleißigen Elfen die Kinder in ganz Ravensburg, dabei passieren ihm einige Missgeschicke.</p>
-            <a href="assets/video.mp4" class="card-link">Serie sofort ansehen</a>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    <br>
-    <hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" /> 
-    <br>
-    <p style='text-align:center'><font color="#00e5ff" size="6"><strong>Film der Woche</strong></font></p>
-
-    <div class="column">
-    <div class="card" style="width: 18rem; text-align: center;">
-    <img class="card-img-top" src="assets/img/Filme/der_letzte_schritt_f.jpg" alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text">Louis ist ein Außenseiter. Er versucht alles um Anschluss zu finden und so lässt er sich auf eine lebensgefährliche Mutprobe ein. Gemäß dem Motto „alles oder nichts“..</p>
-      <a href="assets/video.mp4" class="card-link">Film sofort ansehen</a>
-    </div>
-  </div>
-  </div>
-       
-    <br>
-    <hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" /> 
-    <br>
-
-  
-  <img style="text-align: center;" src="assets/img/werbung.PNG" alt="Hier könnte Ihre Werbung stehen" >
-  <img style="text-align: center;" src="assets/img/logo/ChillWatcher-Logo-Quadrat-Kreis-3.svg" alt="Hier sollte das ChillWatcher-Logo zu sehen sein">
-  
-
-<!--
-
-    <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-         Page Content
-        <div class="container">
-                <div class="card-columns">
-                    <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
-                        <img class="card-img-top" [src]="movie.linkToWallpaper" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ movie.name }}</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-        
-                 
-                <table class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Rating</th>
-                            <th scope="col">Link</th>
-                            <th scope="col">Image</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let movie of movies">
-                            <td class="table-light">{{ movie.id }}</td>
-                            <td class="table-light">{{ movie.name }}</td>
-                            <td class="table-light">{{ movie.rating }}</td>
-                            <td class="table-light">{{ movie.linkToWallpaper }}</td>
-                            <img [src]="movie.linkToWallpaper">
-                        </tr>
-                    </tbody>
-                </table>
-        
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/img/Serien/weihnachtsmann_ und_co._kg_s.jpg" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">Der Weihnachtsmann beschenkt mithilfe seiner fleißigen Elfen die Kinder in ganz Ravensburg, dabei passieren ihm einige Missgeschicke.</p>
+                <a href="assets/video.mp4" class="card-link">Serie sofort ansehen</a>
             </div>
+        </div>
+    </div>
+</div>
 
-</body>
+<br>
+<hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" />
+<br>
+<p style='text-align:center'>
+    <font color="#00e5ff" size="6"><strong>Film der Woche</strong></font>
+</p>
+
+<div class="column">
+    <div class="card" style="width: 18rem; text-align: center;">
+        <img class="card-img-top" src="assets/img/Filme/der_letzte_schritt_f.jpg" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">Louis ist ein Außenseiter. Er versucht alles um Anschluss zu finden und so lässt er sich auf eine lebensgefährliche Mutprobe ein. Gemäß dem Motto „alles oder nichts“..</p>
+            <a href="assets/video.mp4" class="card-link">Film sofort ansehen</a>
+        </div>
+    </div>
+</div>
+
+<br>
+<hr style="height: 5px; width: 100%; background-color: #00e5ff; border: 0;" />
+<br>
 
 
-<router-outlet></router-outlet>
--->
+<img style="text-align: center;" src="assets/img/werbung.PNG" alt="Hier könnte Ihre Werbung stehen">
+<img style="text-align: center;" src="assets/img/logo/ChillWatcher-Logo-Quadrat-Kreis-3.svg" alt="Hier sollte das ChillWatcher-Logo zu sehen sein">

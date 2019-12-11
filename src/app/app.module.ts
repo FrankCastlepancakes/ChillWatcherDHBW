@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { CarouselModule } from 'ngx-bootstrap';
+//import {CarouselModule} from "angular2-carousel";
+//import {Rx} from 'rxjs/Rx';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -30,7 +30,7 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatRadioModule} from '@angular/material/radio';
+import {MatRadioModule} from '@angular/material/radio'; 
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSliderModule} from '@angular/material/slider';
@@ -93,7 +93,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CarouselModule.forRoot(),
+    //CarouselModule,
     CountdownModule,
     MatAutocompleteModule,
     MatBadgeModule,
