@@ -17,6 +17,7 @@ import { DramaComponent } from './drama/drama.component';
 import { HorrorComponent } from './horror/horror.component';
 import { KidsComponent } from './kids/kids.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { KontoDetailsComponent } from './konto-details/konto-details.component';
 
 
 const appRoutes: Routes = [
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   { path: 'horror', component: HorrorComponent },
   { path: 'kids', component: KidsComponent }, 
   { path: 'impressum', component:ImpressumComponent },
+  { path: 'konto-details', component:KontoDetailsComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 
