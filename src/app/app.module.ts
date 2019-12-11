@@ -66,6 +66,7 @@ import { DramaComponent } from './drama/drama.component';
 import { HorrorComponent } from './horror/horror.component';
 import { KidsComponent } from './kids/kids.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { KontoDetailsComponent } from './konto-details/konto-details.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     HorrorComponent,
     KidsComponent,
     ImpressumComponent,
+    KontoDetailsComponent,
   ],
   imports: [
     BrowserModule,
