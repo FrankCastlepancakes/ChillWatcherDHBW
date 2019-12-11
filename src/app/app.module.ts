@@ -95,7 +95,7 @@ import { KontoDetailsComponent } from './konto-details/konto-details.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    //CarouselModule,
+    CarouselModule,
     CountdownModule,
     MatAutocompleteModule,
     MatBadgeModule,
