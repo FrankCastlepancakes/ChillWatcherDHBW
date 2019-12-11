@@ -33,10 +33,11 @@ const appRoutes: Routes = [
   { path: 'komoedien', component: KomoedienComponent },
   { path: 'drama', component: DramaComponent },
   { path: 'horror', component: HorrorComponent },
-  { path: 'kids', component: KidsComponent },
+  { path: 'kids', component: KidsComponent }, 
+  { path: 'impressum', component:ImpressumComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
-  { path: 'impressum', component:ImpressumComponent }
+  { path: '**', component: PageNotFoundComponent }
+
   
 ];
 
