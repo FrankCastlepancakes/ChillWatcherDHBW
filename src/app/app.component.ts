@@ -17,13 +17,4 @@ export class AppComponent {
     this.title = 'Chillwatcher';
   }
 
-  search(event : any) {
-    if (event.keyCode === 13){
-      let inputText = event.target.value;
-      /*this.movieService.findMatching(inputText).subscribe(data => {
-        this.movies = data;
-      });*/
-    } 
-  }
-
 }

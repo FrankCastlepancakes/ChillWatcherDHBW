@@ -12,19 +12,19 @@ export class MovieServiceService {
  
   constructor(private http: HttpClient) {
     //this.moviesUrl = 'https://restchillwatcher.herokuapp.com';
-    this.moviesUrl = "http://localhost:8080/movies";
+    this.moviesUrl = "http://localhost:8080/";
   }
  
   public findAll(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.moviesUrl);
+    return this.http.get<Movie[]>(this.moviesUrl + "movies");
   }
 
-  /*public findMatching(searchInput: String): Observable<Movie[]> {
-    return null;
-    //return this.http.get<Movie[]>(this.moviesUrl + "?name=" + searchInput);
-  }*/
+  public findMatching(searchInput: String): Observable<Movie[]> {
+    return this.http.get<Movie[]>(this.moviesUrl + "movie" + "?movieName=" + searchInput);
+  }
  
   public addMovie(movie: Movie) {
     this.http.post("http://localhost:8080/addMovie", movie).toPromise();
+    //this.http.post("https://restchillwatcher.herokuapp.com", movie).toPromise();
   }
 }

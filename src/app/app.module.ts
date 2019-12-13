@@ -5,10 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//import {CarouselModule} from "angular2-carousel";
-//import {Rx} from 'rxjs/Rx';
-
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { CarouselModule } from 'ngx-bootstrap';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -139,7 +135,10 @@ import { KontoDetailsComponent } from './konto-details/konto-details.component';
   exports: [
     MatIconModule
   ],
-  providers: [MovieServiceService],
+  providers: [
+    MovieServiceService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

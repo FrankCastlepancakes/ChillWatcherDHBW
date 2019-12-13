@@ -1,121 +1,90 @@
-<br>
-<div class="card-group" style="margin-top: -425px; width: 15%; height: 650px;">
-    <div class="card" style="background-color: rgba(0, 0, 0, 0); border: none;">
-        <img src="\assets\img\logo\cw.svg"
-            alt="Hier sollte das ChillWatcher-Logo zu sehen sein">
-    </div>
-</div>
-<div class="card-group">
-    <div class="card">
-        <span style="font-weight: bold"> <h2>Registrierung</h2></span>
-        <span><h6>(Für eine erfolgreiche Registrierung müssen Sie alle Felder ausfüllen)</h6></span>
-        <hr>
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Prename</label>
-                <input type="text" class="form-control" id="prename"
-                    placeholder="Enter your prename" style="color: white;">
-                <small class="form-text text-muted">
-                   Please enter your prename.
-                </small>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Last name</label>
-                <input type="text" class="form-control" id="lastname"
-                    placeholder="Enter your last name" style="color: white;">
-                <small class="form-text text-muted">
-                    Please enter your last name.
-                </small>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">street</label>
-                <input type="text" class="form-control" id="street"
-                    placeholder="Enter your street" style="color: white;">
-                <small class="form-text text-muted">
-                        Please enter your street.
-                </small>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">House number</label>
-                <input type="text" class="form-control" id="number"
-                    placeholder="Enter your house number" style="color: white;">
-                <small class="form-text text-muted">
-                    Please enter your house number.
-                </small>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Post code</label>
-                <input type="text" class="form-control" id="postcode"
-                    placeholder="Enter your post code" style="color: white;">
-                <small class="form-text text-muted">
-                    Please enter your post code.
-                </small>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">City</label>
-                <input type="text" class="form-control" id="city"
-                    placeholder="Enter your city" style="color: white;">
-                <small class="form-text text-muted">
-                    Please enter your city.
-                </small>
-            </div>
-           
-            <div class="form-group">
-                <label for="exampleInputEmail1">Select an abo: &ensp;</label>
-                <input type="radio" name="abo" id="basic"> Basic (7,99€) &emsp; 
-                <input type="radio" name="abo" id="standard"> Standard (11,99€) &emsp; 
-                <input type="radio" name="abo" id="premium"> Premium (15,99€)
-            </div>
-            
-            <div class="form-group">
-                <label for="exampleInputEmail1">IBAN</label>
-                <input type="text" class="form-control" id="iban"
-                    placeholder="Enter your IBAN" style="color: white;">
-                <small class="form-text text-muted">
-                    Please enter your IBAN.
-                </small>
-                <br>
-            </div>
-
-            <div class="form-group">
-                <input type="checkbox" name="authorization" id="check"> &ensp; I accept all conditions.
-                <small class="form-text text-muted">
-                    You have to agree the conditions.
-                </small>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter your email" style="color: white;">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword5">Password</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"
-                    placeholder="Enter your password" style="color: white;">
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
-                    spaces,
-                    special characters, or emoji.
-                </small>
-            </div>
-            <div class="form-group">
-                <label for="inputPasswordR">Confirm Password</label>
-                <input type="password" id="inputPasswordR" class="form-control" aria-describedby="passwordHelpBlock"
-                    placeholder="Enter your password again" style="color: white;">
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                    Repeat your password.
-                </small>
-            </div>
-            <button onclick="myRegistration()" type="submit" id="signupButton" class="btn btn-primary"><a id="loginLink"
-                href="home.html">Registrieren</a></button>
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>Registrierung</h1>
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Vorname" id="firstName" required [(ngModel)]="model.firstName" name="firstName" #firstName="ngModel" pattern="[a-zA-Z ]*" [maxlength]="40">
+                    <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                        Kein gültiger Vorname (erlaubt sind nur die Buchstaben a-zA-Z).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Nachname" id="lastName" required [(ngModel)]="model.lastName" name="lastName" #lastName="ngModel" pattern="[a-zA-Z ]*" [maxlength]="40">
+                    <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+                        Kein gültiger Nachname (erlaubt sind nur die Buchstaben a-zA-Z).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Postleitzahl" id="postcode" required [(ngModel)]="model.postcode" name="postcode" #postcode="ngModel" pattern="[0-9 ]*" [maxlength]="5">
+                    <div [hidden]=" postcode.valid || postcode.pristine " class="alert alert-danger ">
+                        Keine gültige Postleitzahl (erlaubt sind nur Zahlen).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Stadt" id="city" required [(ngModel)]="model.city" name="city" #city="ngModel" pattern="[a-zA-Z ]*" [maxlength]="40">
+                    <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+                        Keine gültige Stadt (erlaubt sind nur die Buchstaben a-zA-Z).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Straße" id="street" required [(ngModel)]="model.street" name="street" #street="ngModel" pattern="[a-zA-Z ]*" [maxlength]="40">
+                    <div [hidden]="street.valid || street.pristine" class="alert alert-danger">
+                        Keine gültige Straße (erlaubt sind nur die Buchstaben a-zA-Z).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="Hausnummer" id="houseNumber" required [(ngModel)]="model.houseNumber" name="houseNumber" #houseNumber="ngModel" pattern="[0-9, ]*" [maxlength]="4">
+                    <div [hidden]=" houseNumber.valid || houseNumber.pristine " class="alert alert-danger ">
+                        Keine gültige Hausnummer (erlaubt sind nur Zahlen, Hausnummern wie "24/2" werden als "24,2" eingegeben).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="IBAN" id="iban" required [(ngModel)]="model.iban" name="iban" #iban="ngModel" pattern="[a-zA-Z0-9 ]*" [maxlength]="40">
+                    <div [hidden]=" iban.valid || iban.pristine " class="alert alert-danger ">
+                        Keine gültige IBAN (erlaubt sind nur Zahlen und Buchstaben, keine Sonderzeichen).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select matInput placeholder="Art des Abonnements" required [(ngModel)]="model.abo" name="abo" #abo="ngModel">
+                    <mat-option value="0">Basic (7,99€)</mat-option>
+                    <mat-option value="1">Standard (11,99€)</mat-option>
+                    <mat-option value="2">Premium (15,99€)</mat-option>
+                </mat-select>
+                <div [hidden]="abo.valid || abo.pristine" class="alert alert-danger">
+                    Kein gültiges Abonnement. Wählen sie eins der drei vorliegenden Abonnements aus.
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input matInput placeholder="eMail-Adresse" id="email" required [(ngModel)]="model.email" name="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [maxlength]="40">
+                    <div [hidden]=" email.valid || email.pristine " class="alert alert-danger ">
+                        Keine gültige eMail-Adresse (Sonderzeichen sind nicht erlaubt).
+                    </div>
+                </div>
+            </mat-form-field>
+            <mat-form-field>
+                <div class="form-group">
+                    <input type="password" matInput placeholder="Passwort" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel" [maxlength]="40">
+                    <div [hidden]=" password.valid || password.pristine " class="alert alert-danger ">
+                        Kein gültiges Passwort.
+                    </div>
+                </div>
+            </mat-form-field>
+            <button type="submit " class="btn btn-success " (click)="newUser(); userForm.reset() " routerLink="/home" [disabled]="!userForm.form.valid ">Senden</button>
         </form>
     </div>
 </div>

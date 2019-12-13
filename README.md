@@ -11,7 +11,7 @@ Download and install Node.js and npm with the guideline on https://www.npmjs.com
 
 ## Step Two
 
-Download and install the Angular CLI with the command "npm install -g @angular/cli". Install the Angular Material module, too (https://material.angular.io/guide/getting-started). Answer questions of the Material module with "yes" and select indigo as color. Furthermore install the countdown module with "npm install ng2-date-countdown --save".
+Download and install the Angular CLI with the command "npm install -g @angular/cli". Install the Angular Material module, too (https://material.angular.io/guide/getting-started). Answer questions of the Material module with "yes" and select indigo as color. Furthermore install several libraries with these commands "npm install ng2-date-countdown --save", "npm install ngx-bootstrap --save".
 
 ## Step Three
 

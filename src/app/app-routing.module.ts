@@ -18,7 +18,7 @@ import { HorrorComponent } from './horror/horror.component';
 import { KidsComponent } from './kids/kids.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { KontoDetailsComponent } from './konto-details/konto-details.component';
-
+import { SmartHomeComponent } from "./smart-home/smart-home.component";
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -37,10 +37,9 @@ const appRoutes: Routes = [
   { path: 'kids', component: KidsComponent }, 
   { path: 'impressum', component:ImpressumComponent },
   { path: 'konto-details', component:KontoDetailsComponent },
+  { path: 'smart-home', component:SmartHomeComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
-
-  
 ];
 
 @NgModule({

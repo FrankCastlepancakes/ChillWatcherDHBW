@@ -12,15 +12,6 @@
             </mat-form-field>
 
             <mat-form-field>
-                <div class="form-group">
-                    <input matInput placeholder="Bewertung (Zahlen zwischen 0,0 und 100,0)" id="movieRating" required [(ngModel)]="model.movieRating" name="movieRating" #movieRating="ngModel">
-                    <div [hidden]="movieRating.valid || movieRating.pristine" class="alert alert-danger">
-                        Film-Bewertung wird benötigt
-                    </div>
-                </div>
-            </mat-form-field>
-
-            <mat-form-field>
                 <input matInput [matDatepicker]="picker" placeholder="Erscheinungsdatum" required [(ngModel)]="model.movieReleaseDate" name="movieReleaseDate" #movieReleaseDate="ngModel">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -30,23 +21,44 @@
             </mat-form-field>
 
             <mat-form-field>
-                <textarea matInput placeholder="Film-Beschreibung" required [(ngModel)]="model.movieDesription" name="movieDesription" #movieDesription="ngModel"></textarea>
-                <div [hidden]="movieDesription.valid || movieDesription.pristine" class="alert alert-danger">
+                <textarea matInput placeholder="Film-Beschreibung" required [(ngModel)]="model.movieDescription" name="movieDescription" #movieDescription="ngModel"></textarea>
+                <div [hidden]="movieDescription.valid || movieDescription.pristine" class="alert alert-danger">
                     Film-Beschreibung wird benötigt
                 </div>
             </mat-form-field>
 
             <mat-form-field>
-                <input matInput placeholder="Transaktions-Code bestätigen" [type]="hide ? 'password' : 'text'" required [(ngModel)]="model.transactionCode" name="transactionCode" #transactionCode="ngModel">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-                <div [hidden]="transactionCode.valid || transactionCode.pristine" class="alert alert-danger">
-                    Transaktions-Code wird benötigt
+                <mat-select matInput placeholder="Kategorie des Films" required [(ngModel)]="model.movieCategory" name="movieCategory" #movieCategory="ngModel">
+                    <mat-option value="Kids">Kids</mat-option>
+                    <mat-option value="Thriller">Thriller</mat-option>
+                    <mat-option value="Drama">Drama</mat-option>
+                    <mat-option value="Horror">Horror</mat-option>
+                    <mat-option value="Comedy">Comedy</mat-option>
+                </mat-select>
+                <div [hidden]="movieCategory.valid || movieCategory.pristine" class="alert alert-danger">
+                    Film-Kategorie wird benötigt
                 </div>
             </mat-form-field>
-
             <button type="submit" class="btn btn-success" (click)="newMovie(); movieForm.reset()" [disabled]="!movieForm.form.valid">Senden</button>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                    <input class="form-control py-2 border-right-0 border" style="color: white;" type="search" placeholder="Titel, Genre, Schauspieler" id="example-search-input" (keypress)="search($event)">
+                    <span class="input-group-append">
+                                  <div class="input-group-text bg-transparent"><mat-icon>search</mat-icon></div>
+                                </span>
+                </div>
+            </form>
         </form>
+    </div>
+</div>
+<div class="container">
+    <div class="card-columns">
+        <div class="card" style="width: 18rem;" *ngFor="let movie of movies">
+            <img class="card-img-top" [src]="movie.linkToWallpaper" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.movieName }}</h5>
+                <p class="card-text">{{ movie.movieDescription }}</p>
+            </div>
+        </div>
     </div>
 </div>

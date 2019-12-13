@@ -3,15 +3,16 @@
 </head>
 
 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class=" container">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/Logo/Chillwatcher-Logo-4.svg " width="30" height="30" alt="">
+                <img src="assets/img/Logo/Chillwatcher-Logo.svg" width="30" height="30" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -37,15 +38,15 @@
                         <a class="nav-link" routerLink="/my-list" routerLinkActive="active">
                             <span class="fa fa-list"></span>Meine Liste</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/smart-home" routerLinkActive="active">
+                            <span class="fa fa-home"></span>SmartHome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/movie-Form" routerLinkActive="active">
+                            <span class="fa fa-wpforms"></span>Film-Formular</a>
+                    </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <div class="input-group">
-                        <input class="form-control py-2 border-right-0 border" style="color: white;" type="search" placeholder="Titel, Genre, Schauspieler" id="example-search-input" (keypress)="search($event)">
-                        <span class="input-group-append">
-                                  <div class="input-group-text bg-transparent"><mat-icon>search</mat-icon></div>
-                                </span>
-                    </div>
-                </form>
             </div>
         </div>
     </nav>
@@ -63,11 +64,13 @@
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Navigation</h5>
                     <ul class="list-unstyled">
-                        <li><a href="/home">Startseite</a></li>
-                        <li><a href="/series">Serien</a></li>
-                        <li><a href="/movies">Filme</a></li>
-                        <li><a href="/recently-added">Kürzlich hinzugefügt</a></li>
-                        <li><a href="/my-list">Meine Liste</a></li>
+                        <li><a routerLink="/home">Startseite</a></li>
+                        <li><a routerLink="/series">Serien</a></li>
+                        <li><a routerLink="/movies">Filme</a></li>
+                        <li><a routerLink="/recently-added">Kürzlich hinzugefügt</a></li>
+                        <li><a routerLink="/my-list">Meine Liste</a></li>
+                        <li><a routerLink="/smart-home">SmartHome</a></li>
+                        <li><a routerLink="/movie-Form">Film-Formular</a></li>
                     </ul>
                 </div>
                 <!-- Grid column -->
@@ -77,8 +80,8 @@
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Rechtlich</h5>
                     <ul class="list-unstyled">
-                        <li><a href="/impressum">Impressum</a></li>
-                        <li><a href="/privacy">Datenschutz</a></li>
+                        <li><a routerLink="/impressum">Impressum</a></li>
+                        <li><a routerLink="/privacy">Datenschutz</a></li>
                     </ul>
 
                 </div>
@@ -89,8 +92,8 @@
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Account</h5>
                     <ul class="list-unstyled">
-                        <li><a href="/konto-details">Konto-Details</a></li>
-                        <li><a href="/login">Abmelden</a></li>
+                        <li><a routerLink="/konto-details">Konto-Details</a></li>
+                        <li><a routerLink="/login">Abmelden</a></li>
                     </ul>
                 </div>
             </div>
@@ -107,6 +110,4 @@
 
     </footer>
     <!-- Footer -->
-
-
 </body>
